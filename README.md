@@ -227,14 +227,3 @@ MIT — see `LICENSE` in this repo.
 
 ---
 
-### Badges (optional for your README)
-
-```md
-![PWA](https://img.shields.io/badge/PWA-ready-blue)
-![React](https://img.shields.io/badge/React-no%20JSX-61DAFB)
-![AI](https://img.shields.io/badge/AI-Gemini%201.5-8A2BE2)
-![Build](https://img.shields.io/badge/Build-Vite-646CFF)
-![Deploy](https://img.shields.io/badge/Deploy-Netlify-00C7B7)
-```
-
----
