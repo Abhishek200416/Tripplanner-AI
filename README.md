@@ -12,7 +12,7 @@ A lightweight, installable trip-planning web app for India that creates **budget
 
 * **AI Itinerary Generation**
 
-  * Uses **Gemini 1.5** via Google Generative Language API when `VITE_GEMINI_API_KEY` is set.
+  * Uses **Gemini ** via Google Generative Language API when `VITE_GEMINI_API_KEY` is set.
   * If no key or rate-limited, returns a **high-quality mock itinerary** so the app always works in demos.
 * **Budget Intelligence**
 
