@@ -1,4 +1,4 @@
-# TripPlanner-AI — PWA (No JSX, React + Maps + Gemini)
+# TripPlanner-AI — PWA (React + Maps + Gemini)
 
 A lightweight, installable trip-planning web app for India that creates **budget-aware, day-by-day itineraries** from your inputs (city, days, themes, party type). Built with **plain React (no JSX)** and **modern CSS**, it runs great even **without paid API keys** thanks to smart fallbacks.
 
