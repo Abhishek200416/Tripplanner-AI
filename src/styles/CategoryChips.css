@@ -1,0 +1,71 @@
+/* ===== Base chip styles ===== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-1);
+  color: var(--chip-ink);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.25s, color 0.25s, border-color 0.25s;
+  outline: none;
+}
+
+/* Make everything inside the chip follow the text color (icons/emojis/SVGs) */
+.chip * {
+  color: inherit;
+  fill: currentColor;
+}
+
+/* Hover / focus */
+.chip:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-subtle);
+  background: color-mix(in srgb, var(--brand) 10%, var(--surface-1));
+}
+
+.chip:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 35%, transparent);
+}
+
+/* ===== ACTIVE STATE TOKENS ===== */
+/* DARK THEME – blue text on gradient pill */
+:root {
+  --chip-active-bg: linear-gradient(
+    90deg,
+    var(--pill-bg),
+    color-mix(in srgb, var(--accent) 18%, var(--pill-bg))
+  );
+  --chip-active-ink: var(--brand); /* blue text in dark theme */
+  --chip-active-border: color-mix(in srgb, var(--brand) 45%, var(--line));
+}
+
+/* LIGHT THEME – solid blue pill, white text */
+html[data-theme="light"] {
+  --chip-active-bg: var(--brand);               /* blue fill */
+  --chip-active-ink: #ffffff;                   /* white text */
+  --chip-active-border: color-mix(in srgb, var(--brand) 60%, var(--line));
+}
+
+/* ===== ACTIVE STATE ===== */
+.chip.active {
+  background: var(--chip-active-bg);
+  color: #6675ff;                /* uses theme-based text color */
+  border-color: var(--chip-active-border);
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+/* Optional: keep emoji/images readable */
+.chip.active img,
+.chip.active .emoji {
+  filter: none;
+  opacity: 0.95;
+}

@@ -1,0 +1,26 @@
+# Node / Vite / PWA
+node_modules/
+dist/
+out/
+.vite/
+.cache/
+
+# Env & credentials
+.env
+.env.*
+firebase-debug.log
+
+# Functions (if Firebase functions have env or build)
+functions/node_modules/
+functions/.env
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Python scratch (you have test.py)
+__pycache__/
+*.pyc
+echo "public/*.json" >> .gitignore
+public/*.json

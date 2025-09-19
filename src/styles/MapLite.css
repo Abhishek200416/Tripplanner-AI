@@ -1,0 +1,14 @@
+/* src/styles/MapLite.css */
+.maplite { display: grid; gap: 10px; }
+.maplite-head { font-weight: 800; color: var(--text-strong); }
+.maplite-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.maplite-grid { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.ml-day { font-weight: 800; color: var(--text); padding: 6px 8px; border: 1px dashed var(--line); border-radius: 10px; }
+.ml-poi { text-align: left; }
+.maplite-foot { margin-top: 4px; }
+.muted { color: var(--text-dim); }
+.cardish { padding: 12px;  border-radius: 14px; background: var(--surface-1); }
+.btn { border-radius: 12px; padding: 10px 12px; border: 1px solid var(--line); cursor: pointer; }
+.btn.fill { background: var(--brand); color: #fff; border-color: transparent; text-decoration: none; }
+.btn.ghost { background: var(--surface-1); color: var(--text); text-decoration: none; }
+.hint { font-size: 12px; color: var(--text-dim); }

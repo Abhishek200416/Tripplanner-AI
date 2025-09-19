@@ -1,0 +1,22 @@
+/* src/styles/MapView.css (additions) */
+.map-panel { display: grid; gap: 10px; }
+.map-title { font-weight: 800; color: var(--text-strong); }
+
+.map-tabs { display: flex; gap: 8px; }
+.tab { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-1); cursor: pointer; }
+.tab.active { background: var(--pill-bg); color: #6675ff; border-color: color-mix(in srgb, var(--brand) 55%, var(--line)); }
+.tab:disabled { opacity: .55; cursor: not-allowed; }
+
+.map-search { display: flex; gap: 8px; align-items: center; }
+.map-search-input { flex: 1; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-1); color: var(--text); }
+
+.map-proto-note { font-size: 12px; color: var(--text-dim); }
+.map-summary { font-size: 12px; color: var(--text-dim); }
+.map-help { font-size: 11px; color: var(--text-muted); }
+
+.map-live-wrap { display: grid; }
+.map-live-canvas {
+  width: 100%; height: 320px;
+  border-radius: 14px; background: var(--surface-1);
+  border: 1px solid var(--line); box-shadow: var(--shadow-subtle);
+}

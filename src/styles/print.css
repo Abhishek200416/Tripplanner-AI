@@ -1,0 +1,7 @@
+@media print {
+  body { background: #fff !important; color:#000; }
+  .header, .top-actions, .btn, .toast, .loader-backdrop { display:none !important; }
+  .container { width: 100%; }
+  .card { box-shadow:none; border-color:#ccc; }
+  .map-canvas { display:none; }
+}

@@ -1,0 +1,13 @@
+.app-root { font-family: system-ui, Arial, sans-serif; padding: 10px 0 24px; }
+.container { width: 95%; margin-inline: auto; }
+.stack { display: grid; gap: 14px; }
+@media (min-width: 1100px) {
+  .two-col { display: grid; gap: 14px; grid-template-columns: 1.4fr 1fr; align-items: start; }
+  .sticky-side { position: sticky; top: 12px; }
+}
+.card { padding: 16px; border-radius: 18px; border: 1px solid var(--line); background: var(--surface-1); box-shadow: var(--shadow-subtle); }
+.card-title { margin: 4px 2px 10px; font-weight: 800; color: var(--text-strong); }
+.card.glass { backdrop-filter: blur(10px); max-height: 450px; overflow: auto; margin-top: 30px;
+}
+.toast { position: fixed; right: 18px; bottom: 18px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); box-shadow: var(--shadow-soft); }
+.toast.danger { background: #2b1f22; color: #ffdde1; border-color: #6b2a36; }

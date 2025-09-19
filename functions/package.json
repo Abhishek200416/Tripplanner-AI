@@ -1,0 +1,15 @@
+{
+  "name": "trip-planner-functions",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "serve": "firebase emulators:start --only functions,hosting",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "firebase-functions": "^5.0.1"
+  }
+}

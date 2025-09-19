@@ -1,0 +1,65 @@
+.itinerary { display: grid; gap: 12px; }
+
+/* Header */
+.itinerary-head {
+  display: grid; gap: 8px; padding: 10px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--surface-1);
+}
+.itinerary-head .title { font-weight: 800; color: var(--text-strong); }
+.sub-row { display: flex; gap: 8px; align-items: center; color: var(--text-muted); flex-wrap: wrap; }
+.dot { opacity: .6; }
+.head-actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+
+/* Budget state */
+.budget-alert {
+  padding: 8px; border-radius: 8px; background: #3b1f24; color: #ffd7dc;
+  border: 1px solid #7a3a45; font-weight: 700;
+}
+.budget-ok {
+  padding: 8px; border-radius: 8px; background: rgba(15,202,191,.08);
+  color: #9fe7df; border: 1px solid rgba(15,202,191,.35);
+}
+
+/* Day sections */
+.day.card-subtle { border: 1px solid var(--line); border-radius: 12px; background: var(--surface-1); }
+.day-header { display: flex; align-items: center; gap: 10px; padding: 10px; }
+.day-title { font-weight: 700; color: var(--text); }
+.spacer { flex: 1; }
+.tag { padding: 4px 8px; border-radius: 999px; border: 1px solid var(--line); font-size: 12px; }
+
+/* Collapsible panel */
+.day-panel {
+  padding: 8px 10px 12px;
+  overflow: hidden;
+  transition: max-height .28s ease, padding-top .2s ease, padding-bottom .2s ease, opacity .2s ease;
+  will-change: max-height;
+}
+.day.collapsed .day-panel {
+  max-height: 0 !important;
+  padding-top: 0; padding-bottom: 0;
+  opacity: .6;
+}
+
+/* Slots */
+.slots { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.slot {
+  display: grid; grid-template-columns: 90px 1fr auto;
+  gap: 8px; align-items: center;
+  border: 1px solid var(--line); border-radius: 10px; padding: 8px; background: var(--surface-1);
+}
+.slot .time.pill { justify-self: start; font-weight: 700; }
+.slot .poi { font-weight: 700; color: var(--brand); text-decoration: none; }
+.slot .poi:hover { text-decoration: underline; }
+.slot .cost.tag { justify-self: end; }
+.slot .notes { grid-column: 1 / -1; color: var(--text-muted); font-size: 12px; }
+
+/* Latest added hotel chip */
+.recent-add {
+  display:flex; align-items:center; gap:8px;
+  padding:6px 8px; border-radius:999px;
+  border:1px solid var(--line);
+  background: var(--surface-1);
+  box-shadow: var(--shadow-subtle);
+}
+.recent-add .ra-name { font-weight:700; color: var(--text-strong); }
+.btn.tiny { font-size:12px; padding:4px 8px; }
