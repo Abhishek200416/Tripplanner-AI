@@ -203,26 +203,21 @@ export function TripForm(props) {
   };
 
   // Geolocate origin
-  const useMyLocation = async ()=>{
-    setUsingGeo(true);
-    const loc = await getGeo();
-    if (!loc) { setUsingGeo(false); alert('Location not available.'); return; }
+// In TripForm.js
+const useMyLocation = async () => {
+  setUsingGeo(true);
+  const loc = await getGeo();
+  if (!loc) { setUsingGeo(false); alert('Location not available.'); return; }
 
-    setOriginCoords(loc);
-    window.dispatchEvent(new CustomEvent('tp:geo', { detail: loc }));
+  setOriginCoords(loc);
+  window.dispatchEvent(new CustomEvent('tp:geo', { detail: loc }));
 
-    if (window.google?.maps?.Geocoder){
-      const g = new window.google.maps.Geocoder();
-      g.geocode({ location: loc }, async (res, status) => {
-        let label = (status === 'OK' && res?.[0]) ? res[0].formatted_address : null;
-        if (!label) label = await coordsToPlace(loc);
-        setOrigin(label || 'Near Me'); setUsingGeo(false);
-      });
-    } else {
-      const label = await coordsToPlace(loc);
-      setOrigin(label || 'Near Me'); setUsingGeo(false);
-    }
-  };
+  // Always use our SDK-free reverse geocoder
+  const label = await coordsToPlace(loc);
+  setOrigin(label || 'Near Me');
+  setUsingGeo(false);
+};
+
 
   // Swap origin/destination
   const swapOD = ()=>{
