@@ -34,3 +34,37 @@ img:not([src]),
 img[src=""] {
   background: #f5f7fb;
 }
+/* Firefox */
+* {
+  scrollbar-width: thin;                           /* auto | thin | none */
+  scrollbar-color: color-mix(in srgb, var(--text) 25%, transparent)
+                   color-mix(in srgb, var(--surface-1) 100%, transparent);
+}
+
+/* WebKit (Chromium, Safari) */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--surface-1) 85%, transparent);
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--text) 30%, transparent);
+  border-radius: 10px;
+  border: 2px solid color-mix(in srgb, var(--surface-1) 85%, transparent); /* creates padding gap */
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--text) 45%, transparent);
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Respect prefers-reduced-motion: keep hover subtle */
+@media (prefers-reduced-motion: reduce) {
+  *::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--text) 35%, transparent);
+  }
+}
