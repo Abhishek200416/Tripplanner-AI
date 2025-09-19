@@ -91,11 +91,11 @@ Open the live demo here: **[https://strong-lily-7b13c2.netlify.app/](https://str
 
 ## 🔐 Environment Variables
 
-| Variable              | Purpose                                                              | Required? | Notes                                                                              |
-| --------------------- | -------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------- |
-| `VITE_GEMINI_API_KEY` | Enables live itinerary & suggestion generation via Gemini 1.5        | No        | Without it, the app returns a **deterministic mock** itinerary for reliable demos. |
-| `VITE_MAPS_API_KEY`   | Enables Google Maps JS (markers, day-1 route overlay, travel totals) | No        | Without it, the app uses **Maps Lite** (URL links) which requires **no billing**.  |
-| `VITE_APP_NAME`       | Branding in header                                                   | No        | Defaults to `TripPlanner`.                                                         |
+| Variable              | Purpose                                                              | Required?  | Notes                                                                              |
+| --------------------- | -------------------------------------------------------------------- | ---------  | ---------------------------------------------------------------------------------- |
+| `VITE_GEMINI_API_KEY` | Enables live itinerary & suggestion generation via Gemini            | yes        | Without it, the app returns a **deterministic mock** itinerary for reliable demos. |
+| `VITE_MAPS_API_KEY`   | Enables Google Maps JS (markers, day-1 route overlay, travel totals) | yes(lite+) | Without it, the app uses **Maps Lite** (URL links) which requires **no billing**.  |
+| `VITE_APP_NAME`       | Branding in header                                                   | No         | Defaults to `TripPlanner`.                                                         |
 
 ---
 
