@@ -110,7 +110,8 @@ async function callGemini(prompt) {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 15000);
       try {
-        const res = await fetch(url, { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body), signal: controller.signal });
+        const res = await fetch(url, { method:"POST", headers:{ "Content-Type":"application/json",
+     "x-goog-api-key": GEMINI_KEY }, body: JSON.stringify(body), signal: controller.signal });
         if (res.status === 503) throw new Error("UNAVAILABLE_503");
         if (res.status === 429) throw new Error("RATE_LIMIT_429");
         if (!res.ok) throw new Error("HTTP_" + res.status);
