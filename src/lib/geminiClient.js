@@ -102,7 +102,7 @@ async function callGemini(prompt) {
   if (!GEMINI_KEY || inCooldown()) return { text: "", source: "mock", error: GEMINI_KEY ? "COOLDOWN" : "NO_API_KEY" };
 
   return runInGate(async () => {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`;
     const body = { contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.6, maxOutputTokens: 1400 } };
 
     let lastErr = null;
